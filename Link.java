@@ -1,18 +1,16 @@
-package lab5.ex1;
+package linked_list;
 
 public class Link {
-    public int id;
-    public double marks;
-    public Link next;
+    public int iData;      // 1. தரவு (Data)
+    public Link next;      // 2. அடுத்த பெட்டிக்கான இணைப்பு (Reference)
 
-    public Link(int id, double marks) {
-        this.id = id;
-        this.marks = marks;
-        this.next = null;
+    // Constructor - புதிய பெட்டியை உருவாக்கும் போது நடப்பது
+    public Link(int Data) {
+        this.iData = Data;        // நாம் கொடுக்கும் எண்ணை பெட்டிக்குள் வைக்கும் [cite: 383]
+        next = null;       // ஆரம்பத்தில் இது எதையும் இணைக்கவில்லை, எனவே null [cite: 384]
     }
 
-    public void displayLink() {
-        System.out.println("ID: " + id + ", Marks: " + marks);
+    public void displayLink() { // பெட்டியில் உள்ளதைப் பார்க்க [cite: 388]
+        System.out.println(iData);
     }
-
 }
